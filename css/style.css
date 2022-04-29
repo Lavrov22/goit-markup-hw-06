@@ -462,6 +462,11 @@ border-radius: 50%;
     padding-bottom: 60px;
 }
 
+.footer-container{
+    display: flex;
+    align-items: baseline;
+}
+
 .footer-address{
     font-style: normal;
 }
@@ -522,15 +527,9 @@ border-radius: 50%;
     margin-bottom: 20px;
 }
 
-.footer-wrapper{
-    display: flex;
-    align-items: baseline;
+.footer-wrapper-two + .footer-wrapper-two{
+    margin-left: 85px;
 }
-
-.footer-wrapper-two:not(:last-child) {
-    margin-right: 70px;
-}
-
 .footer-soc-list{
     display: flex;
 }
@@ -558,6 +557,73 @@ border-radius: 50%;
 .footer-soc-icons{
     fill: currentColor;
 }
+
+.footer-form{
+    display: flex;
+    align-items: flex-end;
+    margin-left: 93px;
+}
+
+.footer-form-wrapper{
+    width: 358px;
+}
+
+.footer-label{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.footer-input{
+    min-width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 16px;
+    margin-top: 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+.footer-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    background-color: var(--accent-color);
+    border: 1px;
+    border-radius: 4px;
+    padding: 10;
+    margin-left: 12px;
+    cursor: pointer;
+
+}
+
+.footer-btn-icon{
+    width: 24px;
+    height: 24px;
+    fill: #FFFFFF;
+    margin-left: 10px;
+}
+
 
 /* page portfolio */
 
