@@ -533,7 +533,7 @@ border-radius: 50%;
 .footer-soc-list{
     display: flex;
 }
-.footer-soc-items:not(:last-child) {
+.footer-soc-items:not(:last-child):not(:last-child) {
     margin-right: 10px;
 }
 
@@ -600,8 +600,6 @@ border-radius: 50%;
     align-items: center;
     justify-content: center;
     position: relative;
-    min-width: 200px;
-    height: 50px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
@@ -609,12 +607,11 @@ border-radius: 50%;
     letter-spacing: 0.06em;
     color: #FFFFFF;
     background-color: var(--accent-color);
-    border: 1px;
     border-radius: 4px;
-    padding: 10;
+    padding: 10px 29px;
     margin-left: 12px;
     cursor: pointer;
-
+    border: transparent;
 }
 
 .footer-btn-icon{
@@ -791,6 +788,12 @@ border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.modal-close:hover .modal-svg-close, .modal-close:focus .modal-svg-close{
+    fill: var(--accent-color);
 }
 
 
@@ -798,4 +801,154 @@ border-radius: 50%;
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+}
+
+.modal-form{
+    padding: 40px;
+}
+
+.modal-title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 12px;
+}
+
+.modal-field:nth-child(-n + 4){
+    margin-bottom: 10px;
+}
+
+.modal-label{
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+
+.modal-label:not(:last-child){
+    margin-bottom: 4px;
+}
+
+.modal-input-wrap{
+    position: relative;
+}
+
+
+
+.modal-input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    color: #757575;
+    padding-left: 42px;
+    background-color: transparent;
+    outline: none;
+}
+
+.modal-input:hover, .modal-input:focus{
+    border: 1px solid var(--accent-color);
+}
+
+.modal-input:hover + .modal-svg-icon, .modal-input:focus+.modal-svg-icon{
+    fill: var(--accent-color);
+}
+
+.modal-svg-icon{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+}
+
+.modal-comment{
+    width: 100%;
+    min-height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: #757575;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+}
+
+.modal-comment::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-comment:hover, .modal-comment:focus{
+    border-color: var(--accent-color);
+}
+
+.modal-check{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.modal-label-check{
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-svg-check{
+    margin-right: 9px;
+}
+
+.modal-input-check:checked + .modal-svg-check{
+    fill: var(--accent-color);
+    background-image: url(../images/check.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-origin: border-box;
+}
+
+.modal-agreement{
+    color: var(--accent-color);
+    margin-left: 6px;
+}
+
+.modal-btn-submit{
+    display: block;
+    
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 10px 56px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn-submit:hover, .modal-btn-submit:focus{
+    background-color: #188CE8;
 }
